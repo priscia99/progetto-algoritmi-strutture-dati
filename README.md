@@ -1,9 +1,18 @@
 # Prova finale - Progetto di Algoritmi e Strutture dati - A.A. 2019/2020
 
+Indice dei contenuti
+
+* [Introduzione](#introduzione)
+* [Comandi](#comandi)
+* [Note e considerazioni finali](#note-finali)
+
+<a name="introduzione"></a>
+## Introduzione
 L'obiettivo del progetto è quello di implementare un semplice **editor di testo** eseguibile da terminale, con le classiche funzionalità di aggiunta/rimozione di righe, la visualizzazione dell'intero documento (o parte di esso) e l'esecuzione di altri comandi, come _undo_ e _redo_.<br/>
 Il codice sorgente è stato sottoposto da un verificatore online a numerosi **test**, ciascuno focalizzato su specifiche funzionalità del programma. Obiettivo di questi test è quello di valutare la complessità dell'algoritmo sviluppato, in termini di **utilizzo della memoria** e di **tempo di esecuzione**.<br/>
 A seguito di questi test è stato attribuito al progetto la valutazione di **30 e Lode**.
 
+<a name="comandi"></a>
 ## Comandi
 
 I comandi, necessari per poter interagire con il programma, sono forniti al terminale tramite **tastiera** (_stdin_). Ciascun comando, per poter essere interpretato correttamente dall'editor di testo, deve rispettare la sintassi di seguito mostrata:
@@ -79,6 +88,7 @@ Il documento, per effetto della _redo_, rettifica l'effetto della _undo_ precede
 ### q
 Il comando **_quit_** termina l'esecuzione dell'editor.
 
+<a name="note-finali"></a>
 ## Note e considerazioni finali
 
 Il progetto presenta tutte le funzionalità richieste dal documento di specifica. Non è stato possibile implementare funzionalità aggiuntive in quanto queste avrebbero potuto alterare l'output del programma, con conseguente fallimento dei test generati del verificatore.<br/>
