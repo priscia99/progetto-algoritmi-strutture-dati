@@ -14,10 +14,10 @@ Per terminare il comando è necessario inserire un punto '.' dopo aver scritto s
 
 _Esempio di utilizzo_
 
-1,3c
-Prima riga del file di testo
-Seconda riga del file di testo
-Terza riga del file di testo
+1,3c<br/>
+Prima riga del file di testo<br/>
+Seconda riga del file di testo<br/>
+Terza riga del file di testo<br/>
 .
 
 Il documento contiene ora le righe appena inserite.
@@ -41,11 +41,29 @@ _Esempio di utilizzo_
 
 Supponendo di aver già eseguito i comandi degli esempi precedenti, l'output sarà il seguente:
 
-Prima riga del file di testo
+Prima riga del file di testo<br/>
+.<br/>
 .
-.
 
-_(I punti visualizzati indicano che le righe 2 e 3 non esistono nel documento, poichè eliminate)
+_(I punti visualizzati indicano che le righe 2 e 3 non esistono nel documento, poichè eliminate)_
 
+#### *(number)u*
+Il comando **_undo_** annulla l'effetto di un certo numero, indicato da _number_,  di comandi di tipo _change_ o _delete_ precedentemente eseguiti. Se il numero indicato di comandi da annullare è superiore a quelli precedenemente eseguiti, vengono allora annullati tutti i passi ed il documento diventa vuoto.
 
+_Esempio di utilizzo_
 
+1u
+
+Il documento, per effetto di una _undo_, contiene anche le due righe precedentemente eliminate.
+
+#### *(number)r*
+Il comando **_redo_** annulla l'effetto di un certo numero di _undo_ precedentemente eseguiti, indicato da _number_. Non è possibile eseguire la redo di comandi precedenti all'inserimento, modifica o cancellazione di righe nel file di testo.
+
+_Esempio di utilizzo_
+
+1r
+
+Il documento, per effetto della _redo_, rettifica l'effetto della _undo_ precedente ed elimina di nuovo le due righe che erano state ripristinate.
+
+#### q
+Il comando **_quit_** termina l'esecuzione dell'editor.
