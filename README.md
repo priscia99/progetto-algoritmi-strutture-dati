@@ -96,6 +96,6 @@ Il comando **_quit_** termina l'esecuzione dell'editor.
 
 Il progetto presenta tutte le funzionalità richieste dal documento di specifica. Non è stato possibile implementare funzionalità aggiuntive in quanto queste avrebbero potuto alterare l'output del programma, con conseguente fallimento dei test generati del verificatore.<br/>
 Data la natura del verificatore non si è reso necessario il caricamento/salvataggio dei documenti da/in memoria di massa.<br/><br/>
-Il verificatore online, implementato dai docenti, ha effettuato test utilizzando input di **~250 MB** e richiedendo un tempo massimo di esecuzione di **2,100s**. Il progetto, nei _worst case scenario_, ha impegato al massimo **1,575 secondi** per eseguire i comandi richiesti.
-
+Il verificatore online, implementato dai docenti, ha effettuato test utilizzando input di **~250 MB** e richiedendo un tempo massimo di esecuzione di **2,100s**. Il progetto, nei _worst case scenario_, ha impegato al massimo **1,575 secondi** per eseguire i comandi richiesti.<br/><br/>
+Per informazioni dettagliate su come è stata richiesta l'implementazione delle funzionalità del programma (ed il comportamento da seguire nei numerosi _corner case_) si veda il <a href ="https://github.com/priscia99/progetto-algoritmi-strutture-dati/blob/main/Specifica.pdf">documento di specifica</a>.
 
