@@ -13,12 +13,13 @@ Il comando **_change_** cambia il contenuto delle righe di testo con indice comp
 Per terminare il comando è necessario inserire un punto '.' dopo aver scritto su terminale il contenuto di tutte le righe da modificare/aggiungere.
 
 _Esempio di utilizzo_
-
+```
 1,3c<br/>
 Prima riga del file di testo<br/>
 Seconda riga del file di testo<br/>
 Terza riga del file di testo<br/>
 .
+```
 
 Il documento contiene ora le righe appena inserite.
 
@@ -27,7 +28,9 @@ Il comando **_delete_** cancella tutte le righe comprese tra _ind1_ e _ind2_ (es
 
 _Esempio di utilizzo_
 
+```
 2,3d
+```
 
 Il documento contiene ora una sola riga (_Prima riga del file di testo_).
 
@@ -37,7 +40,9 @@ Il comando **_print_** stampa a video (attraverso _stdout_) il contenuto delle r
 
 _Esempio di utilizzo_
 
+```
 1,3p
+```
 
 Supponendo di aver già eseguito i comandi degli esempi precedenti, l'output sarà il seguente:
 
@@ -52,7 +57,9 @@ Il comando **_undo_** annulla l'effetto di un certo numero, indicato da _number_
 
 _Esempio di utilizzo_
 
+```
 1u
+```
 
 Il documento, per effetto di una _undo_, contiene anche le due righe precedentemente eliminate.
 
@@ -61,7 +68,9 @@ Il comando **_redo_** annulla l'effetto di un certo numero di _undo_ precedentem
 
 _Esempio di utilizzo_
 
+```
 1r
+```
 
 Il documento, per effetto della _redo_, rettifica l'effetto della _undo_ precedente ed elimina di nuovo le due righe che erano state ripristinate.
 
