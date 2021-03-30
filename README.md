@@ -104,7 +104,7 @@ E' stata individuata quindi una soluzione che ha consentito un buon bilanciament
 
 L'algoritmo, in maniera molto semplificata, segue questi passi:
 
-- Viene ricevuto da terminale il comando desiderato dall'utente, che viene decodificato individuandone il tipo di comando richiesto (_c,d,p,u,r,q_) ed eventuali parametri(_ind1, ind2, number);
+- Viene ricevuto da terminale il comando desiderato dall'utente, che viene decodificato individuandone il tipo di comando richiesto (_c,d,p,u,r,q_) ed eventuali parametri(_ind1, ind2, number_);
 - Nel caso di un comando di tipo _change_ o _delete_ viene istanziato un nodo di tipo _Command_ nella pila _pilaUndo_, che contiene al suo interno riferimenti ad eventuali righe aggiunte, modificate o eliminate. In questo modo risulta estremamente semplice effetuare una operazione di _undo_, nel caso in cui questa venga richiesta in futuro;
 - Nel caso di un comando di tipo _undo_, viene preso dalla pila un determinato numero di nodi di tipo _Command_ dalla pila _pilaUndo_, vengono processate le informazioni al loro interno e viene ripristinata la situazione desiderata dall'utente. I comandi precedentemente estratti da _pilaUndo_ vengono poi inseriti, in ordine inverso nella seconda pila _pilaRedo_;
 - Analogamente, viene eseguito il medesimo processo nel caso di un comando di tipo _redo_;
