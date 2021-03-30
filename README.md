@@ -4,6 +4,8 @@
 
 * [Introduzione](#introduzione)
 * [Comandi](#comandi)
+* [Implementazione](#implementazione)
+* [Compilazione ed esecuzione](#compilazione)
 * [Note e considerazioni finali](#note-finali)
 
 <a name="introduzione"></a>
@@ -90,6 +92,40 @@ Il documento, per effetto della _redo_, rettifica l'effetto della _undo_ precede
 
 ### *q*
 Il comando **_quit_** termina l'esecuzione dell'editor.
+
+<a name="implementazione"></a>
+## Implementazione
+
+Durante la fase di progettazione e stesura del codice sono state considerate numerose strategie implementative, ciascuna di esse con diversi punti di forza e criticità.<br/>
+E' stata individuata quindi una soluzione che ha consentito un buon bilanciamento tra complessità temporale e spaziale, attraverso l'utilizzo di una **lista doppiamente concatenata** (lista bidirezionale) e di due **pile**:
+
+- Una prima lista concatenata **_Row_** serve per implementare la struttura logica delle righe di un documento;
+- Due pile **_pilaUndo_** e **_pilaRedo_** di tipo _**Command**_ per implementare le rispettive funzionalità di _undo_ e _redo_ di comandi.
+
+L'algoritmo, in maniera molto semplificata, segue questi passi:
+
+- Viene ricevuto da terminale il comando desiderato dall'utente, che viene decodificato individuandone il tipo di comando richiesto (_c,d,p,u,r,q_) ed eventuali parametri(_ind1, ind2, number);
+- Nel caso di un comando di tipo _change_ o _delete_ viene istanziato un nodo di tipo _Command_ nella pila _pilaUndo_, che contiene al suo interno riferimenti ad eventuali righe aggiunte, modificate o eliminate. In questo modo risulta estremamente semplice effetuare una operazione di _undo_, nel caso in cui questa venga richiesta in futuro;
+- Nel caso di un comando di tipo _undo_, viene preso dalla pila un determinato numero di nodi di tipo _Command_ dalla pila _pilaUndo_, vengono processate le informazioni al loro interno e viene ripristinata la situazione desiderata dall'utente. I comandi precedentemente estratti da _pilaUndo_ vengono poi inseriti, in ordine inverso nella seconda pila _pilaRedo_;
+- Analogamente, viene eseguito il medesimo processo nel caso di un comando di tipo _redo_;
+- Se il comando richiesto è di tipo _print_, infine, vengono stampate le righe richieste dall'utente procedendo con uno scorrimento sequenziale partendo dagli estremi del documento, arrivando all'indice di inizio desiderato.
+
+L'utilizzo di una lista doppiamente concatenata permette l'accesso alle righe del documento partendo da due possibili estremi: un primo, che corrisponde all'inizio del documento; un secondo, che corrisponde invece all'ultima riga.
+In base alla posizione (indice) della riga desiderata è possibile decidere da dove iniziare lo scorrimento della lista, permettendo un notevole risparmio dei tempi di esecuzione nel caso in cui righe selezionate siano vicine agli estremi del documento.
+
+<a name="compilazione"></a>
+## Compilazione ed esecuzione
+Per compilare il programma è sufficiente scaricare il file <a href="https://github.com/priscia99/progetto-algoritmi-strutture-dati/blob/main/Progetto.c">Progetto.c</a> nel proprio PC, raggiungere da terminale la _directory_ in cui il file è salvato ed eseguire il seguente comando:
+
+```
+/usr/bin/gcc -DEVAL -std=gnu11 -O2 -pipe -static -s -o progetto progetto.c -lm
+```
+
+Infine, è possibile eseguire il programma digitando su linea di comando:
+
+```
+./progetto
+```
 
 <a name="note-finali"></a>
 ## Note e considerazioni finali
