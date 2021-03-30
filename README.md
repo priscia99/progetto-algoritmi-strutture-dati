@@ -8,6 +8,9 @@
 
 <a name="introduzione"></a>
 ## Introduzione
+
+Il codice e la documentazione qui descrita è stata prodotta per l'esame "Prova Finale - Algoritmi e Strutture dati" del Politecnico di Milano, Anno Accademico 2019/2020.<br/>
+
 L'obiettivo del progetto è quello di implementare un semplice **editor di testo** eseguibile da terminale, con le classiche funzionalità di aggiunta/rimozione di righe, la visualizzazione dell'intero documento (o parte di esso) e l'esecuzione di altri comandi, come _undo_ e _redo_.<br/>
 Il codice sorgente è stato sottoposto da un verificatore online a numerosi **test**, ciascuno focalizzato su specifiche funzionalità del programma. Obiettivo di questi test è quello di valutare la complessità dell'algoritmo sviluppato, in termini di **utilizzo della memoria** e di **tempo di esecuzione**.<br/>
 A seguito di questi test è stato attribuito al progetto la valutazione di **30 e Lode**.
@@ -85,7 +88,7 @@ _Esempio di utilizzo_
 
 Il documento, per effetto della _redo_, rettifica l'effetto della _undo_ precedente ed elimina di nuovo le due righe che erano state ripristinate.
 
-### q
+### *q*
 Il comando **_quit_** termina l'esecuzione dell'editor.
 
 <a name="note-finali"></a>
