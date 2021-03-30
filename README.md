@@ -31,7 +31,7 @@ _Esempio di utilizzo_
 
 Il documento contiene ora una sola riga (_Prima riga del file di testo_).
 
-#### *(ind1,ind2)p
+#### *(ind1,ind2)p*
 
 Il comando **_print_** stampa a video (attraverso _stdout_) il contenuto delle righe comprese tra _ind1_ e _ind2_ (estremi inclusi). Se le righe non esistono queste vengono visualizzate con un punto '.'
 
