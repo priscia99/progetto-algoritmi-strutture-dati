@@ -14,10 +14,10 @@ Per terminare il comando è necessario inserire un punto '.' dopo aver scritto s
 
 _Esempio di utilizzo_
 ```
-1,3c<br/>
-Prima riga del file di testo<br/>
-Seconda riga del file di testo<br/>
-Terza riga del file di testo<br/>
+1,3c
+Prima riga del file di testo
+Seconda riga del file di testo
+Terza riga del file di testo
 .
 ```
 
@@ -46,9 +46,11 @@ _Esempio di utilizzo_
 
 Supponendo di aver già eseguito i comandi degli esempi precedenti, l'output sarà il seguente:
 
-Prima riga del file di testo<br/>
-.<br/>
+```
+Prima riga del file di testo
 .
+.
+```
 
 _(I punti visualizzati indicano che le righe 2 e 3 non esistono nel documento, poichè eliminate)_
 
