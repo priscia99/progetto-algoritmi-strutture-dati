@@ -1,4 +1,4 @@
-# Prova finale - Progetto di Algoritmi e Strutture dati - A.A. 2019/2020
+# Prova finale - Progetto di Algoritmi e Strutture dati [A.A. 2019/2020]
 
 ### Indice dei contenuti
 
